@@ -44,8 +44,7 @@ public class HangmanModelImplTest {
   /**
    * Tests the constructor throws exception when file does not exist.
    */
-  @Test(expected = IllegalStateException.class)
-  public void testInitializeThrowsExceptionWhenFileDoesNotExist() {
+  @Test(expected = IllegalStateException.class) public void testInitializeThrowsExceptionWhenFileDoesNotExist() {
     HangmanModel hangmanModel = new HangmanModelImpl("res/words-not-here.txt");
     hangmanModel.initialize();
   }
@@ -53,8 +52,7 @@ public class HangmanModelImplTest {
   /**
    * Tests the constructor throws exception when file is empty.
    */
-  @Test(expected = IllegalStateException.class)
-  public void testInitializeThrowsExceptionWhenFileIsEmpty() {
+  @Test(expected = IllegalStateException.class) public void testInitializeThrowsExceptionWhenFileIsEmpty() {
     HangmanModel hangmanModel = new HangmanModelImpl("res/words-empty-test.txt");
     hangmanModel.initialize();
   }
@@ -62,8 +60,7 @@ public class HangmanModelImplTest {
   /**
    * Tests the makeGuess method.
    */
-  @Test
-  public void makeGuess() {
+  @Test public void makeGuess() {
     assertEquals(6, hangmanModelEasy.getGuessesRemaining());
 
     assertTrue(hangmanModelEasy.makeGuess('a'));
@@ -86,8 +83,7 @@ public class HangmanModelImplTest {
   /**
    * Test capital and lowercase letters are treated the same.
    */
-  @Test
-  public void makeGuessCapitalAndLowercase() {
+  @Test public void makeGuessCapitalAndLowercase() {
     assertEquals(6, hangmanModelEasy.getGuessesRemaining());
 
     assertTrue(hangmanModelEasy.makeGuess('a'));
@@ -110,8 +106,7 @@ public class HangmanModelImplTest {
   /**
    * Tests the isGameOver method.
    */
-  @Test
-  public void isGameOver() {
+  @Test public void isGameOver() {
     assertFalse(hangmanModelEasy.isGameOver());
     hangmanModelEasy.makeGuess('a');
     assertFalse(hangmanModelEasy.isGameOver());
@@ -136,8 +131,7 @@ public class HangmanModelImplTest {
   /**
    * Tests the current state method.
    */
-  @Test
-  public void getCurrentState() {
+  @Test public void getCurrentState() {
     String expectedWord = "_________";
     assertEquals(expectedWord, hangmanModelEasy.getCurrentState());
 
@@ -153,8 +147,7 @@ public class HangmanModelImplTest {
   /**
    * Tests the getGuessesRemaining method.
    */
-  @Test
-  public void testGetGuessesRemaining() {
+  @Test public void testGetGuessesRemaining() {
     assertEquals(6, hangmanModelEasy.getGuessesRemaining());
     hangmanModelEasy.makeGuess('a');
     assertEquals(6, hangmanModelEasy.getGuessesRemaining());
@@ -177,8 +170,7 @@ public class HangmanModelImplTest {
   /**
    * Tests the getGuessesRemaining method throws exception when game is over.
    */
-  @Test(expected = IllegalStateException.class)
-  public void testGetGuessesRemainingThrowsExceptionsWhenGameIsOver() {
+  @Test(expected = IllegalStateException.class) public void testGetGuessesRemainingThrowsExceptionsWhenGameIsOver() {
     assertEquals(6, hangmanModelEasy.getGuessesRemaining());
     hangmanModelEasy.makeGuess('b');
     assertEquals(5, hangmanModelEasy.getGuessesRemaining());
@@ -198,8 +190,7 @@ public class HangmanModelImplTest {
   /**
    * Tests the getGuessesRemaining method throws exception when letter has already been used.
    */
-  @Test(expected = IllegalArgumentException.class)
-  public void testGuessesRemainingThrowsExceptionWhenLetterIsRepeated() {
+  @Test(expected = IllegalArgumentException.class) public void testGuessesRemainingThrowsExceptionWhenLetterIsRepeated() {
     assertEquals(6, hangmanModelEasy.getGuessesRemaining());
     hangmanModelEasy.makeGuess('a');
     assertEquals(6, hangmanModelEasy.getGuessesRemaining());
@@ -209,8 +200,7 @@ public class HangmanModelImplTest {
   /**
    * Test getAnswer method.
    */
-  @Test
-  public void testGetAnswer() {
+  @Test public void testGetAnswer() {
     assertEquals("algorithm", hangmanModelEasy.getAnswer());
   }
 }

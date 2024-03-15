@@ -13,8 +13,7 @@ public class HangmanAsciiView implements HangmanView {
     // This constructor is empty because no initialization is needed.
   }
 
-  @Override
-  public String getHangman(int guessesRemaining) {
+  @Override public String getHangman(int guessesRemaining) {
     switch (guessesRemaining) {
       case 6:
         return "  +---+\n" + "  |   |\n" + "      |\n" + "      |\n" + "      |\n" + "      |\n"
@@ -40,33 +39,27 @@ public class HangmanAsciiView implements HangmanView {
     }
   }
 
-  @Override
-  public String getWelcomeMessage() {
+  @Override public String getWelcomeMessage() {
     return "Welcome to Hangman!\nUse \"?\" to quit the game.\n";
   }
 
-  @Override
-  public String getGuessesRemainingMessage(int guessesRemaining) {
+  @Override public String getGuessesRemainingMessage(int guessesRemaining) {
     return "Guesses remaining: " + guessesRemaining + "\n";
   }
 
-  @Override
-  public String getCurrentGuessMessage(String currentState) {
+  @Override public String getCurrentGuessMessage(String currentState) {
     return "Guess the word: " + currentState + "\n";
   }
 
-  @Override
-  public String getEnterGuessMessage() {
+  @Override public String getEnterGuessMessage() {
     return "Guess a letter: ";
   }
 
-  @Override
-  public String getWinMessage(String answer) {
+  @Override public String getWinMessage(String answer) {
     return "You win!\nThe word was: " + answer + "\n";
   }
 
-  @Override
-  public String getLoseMessage(String answer) {
+  @Override public String getLoseMessage(String answer) {
     return "You lose!\nThe word was: " + answer + "\n";
   }
 }

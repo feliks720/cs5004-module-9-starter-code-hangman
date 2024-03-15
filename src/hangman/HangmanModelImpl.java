@@ -34,14 +34,13 @@ public class HangmanModelImpl implements HangmanModel {
     initializeCurrentState();
   }
 
-  @Override
-  public void initialize() {
+  @Override public void initialize() {
     int index = (int) (Math.random() * this.wordList.size());
     this.word = this.wordList.get(index);
   }
 
-  @Override
-  public boolean makeGuess(char letter) throws IllegalArgumentException, IllegalStateException {
+  @Override public boolean makeGuess(char letter)
+      throws IllegalArgumentException, IllegalStateException {
     // Make sure letter is lowercase.
     char guessedLetter = Character.toLowerCase(letter);
     // Check that the game is not over.
@@ -71,18 +70,15 @@ public class HangmanModelImpl implements HangmanModel {
     }
   }
 
-  @Override
-  public boolean isGameOver() {
+  @Override public boolean isGameOver() {
     return guessesRemaining == 0 || !currentState.contains("_");
   }
 
-  @Override
-  public String getCurrentState() {
+  @Override public String getCurrentState() {
     return this.currentState;
   }
 
-  @Override
-  public int getGuessesRemaining() {
+  @Override public int getGuessesRemaining() {
     return this.guessesRemaining;
   }
 
@@ -108,13 +104,11 @@ public class HangmanModelImpl implements HangmanModel {
     }
   }
 
-  @Override
-  public String getAnswer() {
+  @Override public String getAnswer() {
     return this.word;
   }
 
-  @Override
-  public String toString() {
+  @Override public String toString() {
     return "Word: " + this.word + "\n" + "Guessed letters: " + this.guessedLetters + "\n"
         + "Guesses remaining: " + this.guessesRemaining + "\n" + "Current state: "
         + this.currentState;
