@@ -31,16 +31,52 @@ public class HangmanConsoleController implements HangmanController {
     this.view = view;
   }
 
-  @Override public void playGame(HangmanModel model) throws IllegalArgumentException {
+  @Override
+  public void playGame(HangmanModel model) throws IllegalArgumentException {
     if (model == null) {
       throw new IllegalArgumentException("Model can't be null");
     }
     Scanner scan = new Scanner(in);
     try {
-      out.append(view.getWelcomeMessage());
-      // TODO
-      // Interact with the model and view to play the game.
-      // Control the game flow by repeatedly asking the user for a guess and updating the view.
+      out.append(view.getWelcomeMessage()).append("\n");
+      // Loop until the game is over.
+      while (!model.isGameOver()) {
+        // Display current hangman art, remaining guesses, and current state.
+        out.append(view.getHangman(model.getGuessesRemaining())).append("\n");
+        out.append(view.getGuessesRemainingMessage(model.getGuessesRemaining())).append("\n");
+        out.append(view.getCurrentGuessMessage(model.getCurrentState())).append("\n");
+        // Ask for user input.
+        out.append(view.getEnterGuessMessage()).append("\n");
+
+        if (!scan.hasNext()) {
+          break;
+        }
+        String input = scan.next();
+        if (input.length() != 1) {
+          out.append("Please enter a single letter.\n");
+          continue;
+        }
+        char guess = input.charAt(0);
+        try {
+          boolean isCorrect = model.makeGuess(guess);
+          if (isCorrect) {
+            out.append("Correct guess!\n");
+          } else {
+            out.append("Incorrect guess.\n");
+          }
+        } catch (IllegalArgumentException e) {
+          out.append(e.getMessage()).append("\n");
+        } catch (IllegalStateException e) {
+          out.append(e.getMessage()).append("\n");
+          break;
+        }
+      }
+      // Display final output.
+      if (!model.getCurrentState().contains("_")) {
+        out.append(view.getWinMessage(model.getAnswer())).append("\n");
+      } else {
+        out.append(view.getLoseMessage(model.getAnswer())).append("\n");
+      }
     } catch (IOException e) {
       throw new RuntimeException(e);
     }

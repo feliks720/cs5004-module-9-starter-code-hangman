@@ -18,7 +18,7 @@ public class Main {
   public static void main(String[] args) {
     Readable input = new InputStreamReader(System.in);
     Appendable output = System.out;
-    HangmanModel model = new HangmanModelImpl("res/words.txt");
+    HangmanModel model = new HangmanModelImpl("res/words-test.txt");
     HangmanView view = new HangmanAsciiView();
     new HangmanConsoleController(input, output, view).playGame(model);
   }

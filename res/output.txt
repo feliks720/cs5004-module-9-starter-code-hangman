@@ -1,0 +1,255 @@
+Welcome to Hangman!
+Use "?" to quit the game.
+
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+
+Guesses remaining: 6
+
+Guess the word: _________
+
+Guess a letter: 
+a
+Correct guess!
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+
+Guesses remaining: 6
+
+Guess the word: a________
+
+Guess a letter: 
+l
+Correct guess!
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+
+Guesses remaining: 6
+
+Guess the word: al_______
+
+Guess a letter: 
+g
+Correct guess!
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+
+Guesses remaining: 6
+
+Guess the word: alg______
+
+Guess a letter: 
+o
+Correct guess!
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+
+Guesses remaining: 6
+
+Guess the word: algo_____
+
+Guess a letter: 
+r
+Correct guess!
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+
+Guesses remaining: 6
+
+Guess the word: algor____
+
+Guess a letter: 
+t
+Correct guess!
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+
+Guesses remaining: 6
+
+Guess the word: algor_t__
+
+Guess a letter: 
+i
+Correct guess!
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+
+Guesses remaining: 6
+
+Guess the word: algorit__
+
+Guess a letter: 
+t
+The letter has already been guessed.
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+
+Guesses remaining: 6
+
+Guess the word: algorit__
+
+Guess a letter: 
+h
+Correct guess!
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+
+Guesses remaining: 6
+
+Guess the word: algorith_
+
+Guess a letter: 
+m
+Correct guess!
+You win!
+The word was: algorithm
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Welcome to Hangman!
+Use "?" to quit the game.
+
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+
+Guesses remaining: 6
+
+Guess the word: _________
+
+Guess a letter: 
+b
+Incorrect guess.
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+
+Guesses remaining: 5
+
+Guess the word: _________
+
+Guess a letter: 
+c
+Incorrect guess.
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+
+Guesses remaining: 4
+
+Guess the word: _________
+
+Guess a letter: 
+d
+Incorrect guess.
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========
+
+Guesses remaining: 3
+
+Guess the word: _________
+
+Guess a letter: 
+e
+Incorrect guess.
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========
+
+Guesses remaining: 2
+
+Guess the word: _________
+
+Guess a letter: 
+j
+Incorrect guess.
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========
+
+Guesses remaining: 1
+
+Guess the word: _________
+
+Guess a letter: 
+k
+Incorrect guess.
+You lose!
+The word was: algorithm
